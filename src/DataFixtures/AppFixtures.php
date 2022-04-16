@@ -23,7 +23,7 @@ class AppFixtures extends Fixture
             $product = new Product();
             $product->setName($this->faker->words($this->faker->numberBetween(1, 3), true));
             $product->setDescription($this->faker->paragraph($this->faker->numberBetween(1, 4)));
-            $product->setPrice($this->faker->numberBetween(1));
+            $product->setPrice($this->faker->numberBetween(1, 10000));
             $manager->persist($product);
         }
         $manager->flush();
